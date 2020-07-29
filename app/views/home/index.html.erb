@@ -1,6 +1,7 @@
 <h1>Home</h1>
 
 <% if user_signed_in? %>
+  <%= "ログイン中ユーザー: #{current_user.email}" %>
   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to 'ユーザー登録', new_user_registration_path %>
